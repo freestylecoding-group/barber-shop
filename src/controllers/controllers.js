@@ -1,9 +1,10 @@
-import { User } from "../models/User.js";
+import { Employee } from "../models/Users/Employee.js";
+import { User } from "../models/Users/User.js";
 
 export const getSchedules = (req, res) =>{
     const serviceId = req.query.serviceId; 
     const employeeId = req.query.employeeId; 
-    const user = new User('Juan', 'niidea@gamil.com', null, null, null);
+    const employee = new Employee('Juan', 'niidea@gamil.com', null, null, null);
     
-    res.json(user.getUser());
+    res.json(employee.getUser());
 }
